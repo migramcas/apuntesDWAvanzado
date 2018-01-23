@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cambia contenido de un documento</title>
+</head>
+
+<body>
+	<button id="cambiaTexto">Cambia el priver div</button>
+	<div id="primerDiv"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem magnam id ad nobis quasi veniam illo eligendi dolore, praesentium beatae. Incidunt dolorum, commodi hic? Minima voluptatum dolor ipsa facilis nesciunt!</div>
+
+	<button id="concatenar">Concatenar al segundo div</button>
+
+	<div id="segundoDiv">El instructor es:</div>
+	
+	<button id="creador">Crear texto</button>
+
+	<div id="tercerDiv"></div>
+	
+	<p id="uno" onclick="cambiar()">Hola &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hola</p>
+
+
+	<script>
+		/*El evento onclick se levanta cuando hacemos click en alguna parte*/
+		document.getElementById("cambiaTexto").onclick=function(){
+			console.log("Algo");
+		
+		/*El evento innerHTML me permite modificar elementos*/
+			document.getElementById("primerDiv").innerHTML="Texto cambiado"
+		}
+
+		document.getElementById("concatenar").onclick=function(){
+			document.getElementById("segundoDiv").innerHTML= document.getElementById("segundoDiv").innerHTML+"el mejor"
+		}
+
+		document.getElementById("creador").onclick=function(){
+			document.getElementById("tercerDiv").innerHTML="<h3>Ya casi es el descanso </h3>"
+			//Los eventos se escriben TODOS con minúscula
+		}
+		function cambiar(){
+			document.getElementById("uno").innerHTML="Adios!"
+		}
+
+			</script>
+
+</body>
+</html>
